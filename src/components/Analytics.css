@@ -1,0 +1,183 @@
+/* Main container styling with background gradient and rounded corners */
+.analytics-container {
+    padding: 40px;
+    background: linear-gradient(135deg, #f3f4f7, #eaeff2);
+    /* min-height: 100vh; */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Row styling with even distribution of cards */
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Flexbox for columns and better spacing */
+.col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Card styling with enhanced shadow and hover effects */
+.custom-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Stylish card headers */
+.card-header {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #333;
+    padding: 15px;
+    text-align: center;
+    background-color: #f7f8fa;
+    border-bottom: 2px solid #ddd;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Card body styling for text and progress bars */
+.card-body {
+    padding: 25px;
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+}
+
+
+h5 {
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Circular progress styling for modern feel */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+}
+
+.progress-item {
+    width: 85px;
+    height: 85px;
+}
+
+/* Category section title styling with custom underline */
+h4 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+h4:after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #0b79d0;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Hover effect for headers in cards */
+.custom-card:hover h5 {
+    color: #0b79d0;
+}
+
+/* Body styling for consistency across the app */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Responsive Flexbox for category cards */
+.col .custom-card {
+    flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+    min-width: 250px;
+}
+
+@media (max-width: 1024px) {
+    .col .custom-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .col .custom-card {
+        flex: 1 1 100%; /* 1 card per row on mobile */
+    }
+}
+
+/* Card hover effect for transition and shadow */
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress bar spacing */
+.card-body .ant-progress {
+    margin-top: 15px;
+}
+
+/* Spacing and font adjustment for smaller devices */
+@media (max-width: 768px) {
+    h4 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    .progress-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Consistent margins for each section */
+h5 {
+    margin-bottom: 20px;
+    color: #4a4a4a;
+    font-weight: 500;
+}
